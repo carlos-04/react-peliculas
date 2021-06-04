@@ -1,9 +1,26 @@
 import './App.css';
+import { Switch, Route } from "react-router-dom";
+import Rutas from './Route-config'
+import Menu from './components/utils/Menu';
+import ConfigurarValidaciones from './Validaciones';
 
-function App() {
+ConfigurarValidaciones();
+
+const App = () => {
   return (
     <>
-      <h1></h1>
+
+      <Menu />
+      
+      <div className="container mt-5">
+        <Switch>
+          {Rutas.map(ruta => <Route key={ruta.path} path={ruta.path} exact={ruta.exact}>
+            <ruta.component />
+          </Route>)}
+        </Switch>
+      </div>
+
+
     </>
   );
 }
