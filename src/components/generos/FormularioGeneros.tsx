@@ -18,6 +18,7 @@ const FormularioGeneros = (props: formularioGenerosProps) => {
             }
                 //evalua los valores que escriba en los input
                 onSubmit={props.onSubmit}
+                
                 validationSchema={
                     Yup.object({
                     nombre: Yup.string().required('este campo es requerido').primeraLetraMayuscula(),

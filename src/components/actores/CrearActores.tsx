@@ -1,4 +1,3 @@
-import React from 'react'
 import FormularioActores from './FormularioActores'
 
 const CrearActores = () => {

@@ -4,7 +4,7 @@ const IndiceCines = () => {
     return (
         <div>
         <h1>Indice Cines</h1> 
-        <NavLink to="genero/crear">
+        <NavLink to="cines/crear">
            Crear Cines
         </NavLink>           
    </div>

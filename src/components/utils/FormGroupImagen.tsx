@@ -10,7 +10,11 @@ const FormGroupImagen = (props: FormGroupImageProps) => {
     //hook
     const divStyle = { marginTop: '10px' };
     const divStyleimg = { width: '425px' };
+
     const [imagenBase64, setImagenBase64] = useState('');
+
+    const [imagenURL, setImagenURL] = useState(props.imgUrl);
+
     const { values } = useFormikContext<any>();
     //manejar imagenes
     const manejarOnchages = (e: ChangeEvent<HTMLInputElement>) => {
@@ -20,6 +24,7 @@ const FormGroupImagen = (props: FormGroupImageProps) => {
                 .then((representacionBase64: string) => setImagenBase64(representacionBase64))
                 .catch(error => console.log(error));
             values[props.campos] = archivo;
+            setImagenURL('');
         }
     }
     //base64
@@ -44,8 +49,20 @@ const FormGroupImagen = (props: FormGroupImageProps) => {
                     </div>
                 </div> : null
             }
+            {props.imgUrl ?
+                <div>
+                    <div style={divStyle}>
+                        <img style={divStyleimg} src={props.imgUrl} alt="imagen seleccionada" />
+                    </div>
+                </div> : null
+            }
         </div>
     )
+}
+
+FormGroupImagen.defaultProps = {
+  imagenUrl: ''
+
 }
 
 export default FormGroupImagen

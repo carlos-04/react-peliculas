@@ -6,6 +6,7 @@ import Button from "../utils/Button";
 import { Link } from "react-router-dom";
 import FormGroupFecha from "../utils/FormGroupFecha";
 import FormGroupImagen from "../utils/FormGroupImagen";
+import FormGroupMarkDown from "../utils/FormGroupMarkDown";
 
 interface formularioActoresProps {
     model: ActorCreacionDTO;
@@ -29,7 +30,8 @@ const FormularioActores = (props: formularioActoresProps) => {
                     <Form>
                         <FormGroupText campo="nombre" label="Nombre" />
                         <FormGroupFecha label="Fecha Nacimiento" campo="fechaNacimiento" />
-                        <FormGroupImagen campos="foto" label="foto"  />
+                        <FormGroupImagen campos="foto" label="foto"  imgUrl ={props.model.fotoUrl} />
+                        <FormGroupMarkDown campo="biografia" label="biografia"/>
                         <Button type="submit"
                             disabled={formikProps.isSubmitting}>
                             Salvar
