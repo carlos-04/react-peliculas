@@ -1,0 +1,33 @@
+.selector-multiples {
+    display: flex;
+}
+
+.selector-multiples ul {
+    height: 200px;
+    overflow-y: hidden;
+    list-style-type: none;
+    width: 170px;
+    padding: 0;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+.selector-multiples ul li{
+   cursor: pointer;
+   border-bottom: 1px solid #ccc;
+   padding: 2px 10px;
+   font-size: 14px;
+}
+
+.selector-multiples ul li:hover {
+    background-color: #08c;
+}
+
+.selector-multiple-botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+.selector-multiple-botones button {
+    margin: 5px;
+}

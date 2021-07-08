@@ -4,8 +4,9 @@ import * as Yup from 'yup';
 import FormGroupText from '../utils/FormGroupText';
 import Button from '../utils/Button';
 import { Link } from 'react-router-dom';
-interface formularioCinesProps {
+// import Mapa from '../utils/Mapa';
 
+interface formularioCinesProps {
     model: cinesCreacionDTO;
     onSubmit(valores: cinesCreacionDTO, accion: FormikHelpers<cinesCreacionDTO>) : void;
 }
@@ -24,6 +25,9 @@ const FormularioCines = (props: formularioCinesProps) => {
             {(formikProps) => (
                 <Form>
                     <FormGroupText  campo="nombre" label="Nombre" />
+                      {/* <div style={{marginBottom: '1rem'}}>
+                          <Mapa/>
+                      </div> */}
                     <Button disabled={formikProps.isSubmitting} type="submit">Salvar</Button>
                     <Link className="btn btn-secondary" to="/cines">Cancelar</Link>
                 </Form>

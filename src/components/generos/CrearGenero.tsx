@@ -5,8 +5,7 @@ const CrearGenero = () => {
     return (
         <>
             <h1>Crear Genero</h1>
-            <FormularioGeneros model={{ nombre: '' }} onSubmit={async valores => {
-                await new Promise(r => setTimeout(r, 3000));
+            <FormularioGeneros model={{ nombre: '' }} onSubmit={ valores => {
                 console.log(valores)
             }} />
         </>

@@ -9,6 +9,8 @@ interface formularioGenerosProps {
     model: generoCreacionDTO;
     onSubmit(valores: generoCreacionDTO, accion: FormikHelpers<generoCreacionDTO>) : void;
 }
+
+
 const FormularioGeneros = (props: formularioGenerosProps) => {
     return (
         <>
