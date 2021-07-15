@@ -12,7 +12,6 @@ interface formularioActoresProps {
     model: ActorCreacionDTO;
     onSubmit(valores: ActorCreacionDTO, Acciones: FormikHelpers<ActorCreacionDTO>): void
 }
-
 const FormularioActores = (props: formularioActoresProps) => {
     return (
         <>
@@ -22,7 +21,6 @@ const FormularioActores = (props: formularioActoresProps) => {
                 validationSchema={
                     Yup.object({
                         nombre: Yup.string().required('Este campo es requerido').primeraLetraMayuscula()
-
                     })
                 }
             >
