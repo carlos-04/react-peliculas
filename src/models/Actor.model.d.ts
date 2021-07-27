@@ -6,3 +6,12 @@ export interface ActorCreacionDTO {
     fotoUrl?: string;
     biografia?: string;
 }
+
+
+export interface actorPeliculasDTO {
+    id: number;
+    nombre: string;
+    personaje: string;
+    foto: string;
+
+}
